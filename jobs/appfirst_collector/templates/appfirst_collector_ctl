@@ -1,0 +1,19 @@
+#!/bin/bash
+
+case $1 in
+
+  start)
+    dpkg -i /var/vcap/packages/afcollector/appfirst-x86_64.deb
+    pidof collector | cut -f 1 -d \ > /var/vcap/sys/run/appfirst_collector.pid
+
+    ;;
+  stop)
+    kill -2 $(pidof collector)
+
+    ;;
+  *)
+    echo "Usage: appfirst_collector_ctl {start|stop}"
+
+    ;;
+
+esac

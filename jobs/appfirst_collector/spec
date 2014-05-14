@@ -1,0 +1,7 @@
+---
+name: appfirst_collector
+templates:
+  appfirst_collector_ctl: bin/appfirst_collector_ctl
+
+packages:
+  - afcollector
