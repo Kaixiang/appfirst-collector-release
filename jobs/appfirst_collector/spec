@@ -7,4 +7,6 @@ packages:
   - afcollector
 
 properties:
-
+  appfirst_collector.dumb:
+    description: "Dumb properties just for collocating"
+    default: "dumb"
