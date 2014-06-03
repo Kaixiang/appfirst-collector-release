@@ -5,3 +5,6 @@ templates:
 
 packages:
   - afcollector
+
+properties:
+
