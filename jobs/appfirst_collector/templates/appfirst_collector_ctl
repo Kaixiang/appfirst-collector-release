@@ -1,14 +1,21 @@
 #!/bin/bash
 
+RUN_DIR=/var/vcap/sys/run/appfirst_collector/
+
+PIDFILE=$RUN_DIR/collector.pid
+
+source /var/vcap/packages/common/utils.sh
+
 case $1 in
 
   start)
+    pid_guard $PIDFILE "AppfirstCollector"
     dpkg -i /var/vcap/packages/afcollector/appfirst-x86_64.deb
-    pidof collector | cut -f 1 -d \ > /var/vcap/sys/run/appfirst_collector.pid
+    pidof collector | cut -f 1 -d \ > $PIDFILE
 
     ;;
   stop)
-    kill -2 $(pidof collector)
+    kill_and_wait $PIDFILE
 
     ;;
   *)

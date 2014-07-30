@@ -1,5 +1,5 @@
 check process appfirst_collector
-  with pidfile /var/vcap/sys/run/appfirst_collector.pid
+  with pidfile /var/vcap/sys/run/appfirst_collector/collector.pid
   start program "/var/vcap/jobs/appfirst_collector/bin/appfirst_collector_ctl start"
   stop program "/var/vcap/jobs/appfirst_collector/bin/appfirst_collector_ctl stop"
   group vcap

@@ -4,6 +4,7 @@ templates:
   appfirst_collector_ctl: bin/appfirst_collector_ctl
 
 packages:
+  - common
   - afcollector
 
 properties:
