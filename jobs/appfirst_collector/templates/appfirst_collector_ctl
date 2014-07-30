@@ -4,7 +4,7 @@ RUN_DIR=/var/vcap/sys/run/appfirst_collector/
 
 PIDFILE=$RUN_DIR/collector.pid
 
-source /var/vcap/packages/common/utils.sh
+source /var/vcap/packages/appfirst-common/utils.sh
 
 case $1 in
 

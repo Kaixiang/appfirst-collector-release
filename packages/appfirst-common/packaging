@@ -1,0 +1,3 @@
+set -e -x
+
+cp -a appfirst-common/* ${BOSH_INSTALL_TARGET}
